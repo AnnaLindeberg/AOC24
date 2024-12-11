@@ -70,6 +70,9 @@ def sparseChecksum(L):
 
 def softFragment(disk):
     permanentFiles, emptySlots = [], []
+    # both above are lists of slots
+    # each slot has three data points: [emptySpace, startIdx, files]
+    # files is a list of tuples (fileID, size)
     diskIdx = 0
     for i, size in enumerate(disk):
         if i % 2 == 0:
@@ -82,6 +85,8 @@ def softFragment(disk):
     fileID = len(disk)//2
     for size in disk[-1::-2]:
         for slot in emptySlots:
+            # slot has three data points: [emptyspace, startIdx, files]
+            # files is a list of tuples (fileID, size)
             if slot[0] >= int(size):
                 slot[0] -= int(size)
                 slot[2].append((fileID, int(size)))
@@ -99,7 +104,7 @@ def main():
     # even parity of index = file content
     # odd parity of index = free space
     # ceil(n/2) is the no of files 
-    with open("input9.txt") as file:
+    with open("small_input9.txt") as file:
         for row in file:
             disk = row.strip()
     

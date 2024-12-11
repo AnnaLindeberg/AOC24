@@ -18,3 +18,20 @@ This was a nice little graph problem! Looking at the input file, I concluded tha
 
 ## Day 6: Guard Gallivant
 I spent the first part of this figuring out how to work with `slice` objects in custom `getitem`-methods. Completely over-engineered for this certainly, yet still half-assed. But good practice. The second one I solved (almost) brute force, namely by placing an obstruction at each of the positions visited in the first guard-walk (so.. not all spots of the map, but quite many). On the slow side but this time I'm not inclined to cook up something better.
+
+## Day 7: Bridge Repair
+I did this with a queue, sort of just exhaustive search? I didn't even need to abort certain `lines of search' when they became infeasable to make the calculations run quickly enough (I would've guessed this was necessary, since all operations make something larger).
+
+## Day 8: Resonant Collinearity
+Aaaa okay I just didn't feel like another grid-puzzle and hacked together part 1. Part 2 shouldn't be too difficult but my first meager attempt did't work so we'll see if I ever finish it.
+
+## Day 9: Disk Fragmenter
+I _like_ this one! For part 1, I essentially compute the checksum on-the-fly by having a left pointer determining if we're at an index that is initially empty or not and a right pointer that keeps track of what we would move to some empty slot more to the left. Run until the two pointers meet, in essence.
+
+For part 2, I'm in the unfortunate place where it works on the small input but not on the large one. But I think my solution is clever! It should work! :(
+
+## Day 10: Hoof It
+Haha okay this was just a DFS in the map that I hacked together, but I didn't read the task that thoroughly so I solved part 2 when I tried to solve part 1. That means I just needed like one line of code more for part 2. Very quick!
+
+## Day 11: Plutonian Pebbles
+Standard part2: do the same as in part1 but only larger. I have, after all, taught dynamic programming this term so this was not so difficult to crack. Fortunately, the recursion depth was not a problem for python here, because I have no clue how one would make it interative...
