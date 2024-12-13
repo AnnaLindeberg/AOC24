@@ -35,3 +35,6 @@ Haha okay this was just a DFS in the map that I hacked together, but I didn't re
 
 ## Day 11: Plutonian Pebbles
 Standard part2: do the same as in part1 but only larger. I have, after all, taught dynamic programming this term so this was not so difficult to crack. Fortunately, the recursion depth was not a problem for python here, because I have no clue how one would make it interative...
+
+## Day 12: Garden Groups
+So, the first one I solved with some sort of BFS that counts perimeter and area at each position (one contigious flower bed at a time). Not so difficult to figure out, but I'm a bit stumped when it comes to part 2. I have tried to update the BFS to have som "memory" of what fence-pieces already have been encountered, but now when I think about it again I've realized that I can still reach the same fence side from different directions and therefore overcount the sides slightly. I would now guess that one needs to keep track of pieces of fence overall, and then "glue them together" in a last step. That's an interesting thought but not something I had time to code today...
