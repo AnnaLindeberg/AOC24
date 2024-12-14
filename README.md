@@ -38,3 +38,6 @@ Standard part2: do the same as in part1 but only larger. I have, after all, taug
 
 ## Day 12: Garden Groups
 So, the first one I solved with some sort of BFS that counts perimeter and area at each position (one contigious flower bed at a time). Not so difficult to figure out, but I'm a bit stumped when it comes to part 2. I have tried to update the BFS to have som "memory" of what fence-pieces already have been encountered, but now when I think about it again I've realized that I can still reach the same fence side from different directions and therefore overcount the sides slightly. I would now guess that one needs to keep track of pieces of fence overall, and then "glue them together" in a last step. That's an interesting thought but not something I had time to code today...
+
+## Day 13: Claw Contraption
+Oh.. These are linear diophantine equations. Or I guess equation systems of linear diophantine equations. I can sort of do it by hand but not so eager to manage it with a computer. This will have to wait, if ever...
