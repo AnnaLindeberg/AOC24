@@ -44,5 +44,8 @@ OK – weekend! I though about it and solved part 2 too! Essentially, I keep tra
 ## Day 13: Claw Contraption
 Oh.. These are linear diophantine equations. Or I guess equation systems of linear diophantine equations. I can sort of do it by hand but not so eager to manage it with a computer. This will have to wait, if ever...
 
+OK attempt one was fancy math. But even if I generate a particular solution it's a headache to generate all solutions in the correct interval so I gave up and did the stupid thing: nested for-loops. Oh well.
+Attempt three was less fancy math, just matrices -– but that does not seem to find solutions at all?! I give up...
+
 ## Day 14: Restroom Redoubt
 Spent way way way to much time debugging like 6 rows of code I *knew* was correct, since the grid looked nothing like it should after 100 seconds. Turns out I had dropped every single negation sign while reading the input. For part 2: hahaha that's the least well-defined question I've seen in AOC. I need to learn some basics of a GUI to make it work
