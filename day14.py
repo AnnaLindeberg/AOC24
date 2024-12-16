@@ -8,7 +8,7 @@ class RobotArea:
     def __init__(self, robots, width=101, height=103):
         self.width = width
         self.height = height
-        self.robots = robots
+        self.robots = robots.copy()
         pass
     
     def __str__(self):
@@ -24,7 +24,12 @@ class RobotArea:
             res += '\n'
         return res
 
-
+    def allUniquePositions(self):
+        n = len(self.robots)
+        filtered = [r[0] for r in self.robots]
+        k = len(set(filtered))
+        return n == k
+    
     def moveRobot(self, robot):
         pos, vel = robot
         newPos = ((pos[0] + vel[0]) % self.width, (pos[1]+ vel[1]) % self.height)
@@ -63,11 +68,17 @@ def main():
     area = RobotArea(robots)
     for _ in range(100):
         area.moveAllRobots()
-
-    print(area)
     res1 = area.safetyFactor()
 
-    print(f"Task 1: {res1}\nTask 2: {0}")
+    area = RobotArea(robots)
+    for sek in range(1,10000):
+        area.moveAllRobots()
+        if area.allUniquePositions():
+            print(area)
+            res2 = sek
+
+
+    print(f"Task 1: {res1}\nTask 2: {res2}")
 
 
 if __name__ == '__main__':
