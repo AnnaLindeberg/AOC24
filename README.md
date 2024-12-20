@@ -62,3 +62,6 @@ Hm I solved day 1 by tediously rewriting the 8 givenn rules as code, then for pa
 ## Day 19: Linen Layout
 This was so obviously fitting for dynamic programming that I, in essence, solved the second part already in the first. Just had to change some Boolean values in the DP-array to integer counts and remove some `continue`-behaviour. Few lines of codes for a date this late in December -- but I guess there's always an ''easy one'' now and again.
 
+
+## Day 16: Reindeer Maze
+Went back and gave this an attempt in the way I've said last year: build a networkX-graph from the input rather than writing a custom Dijkstra (or similar). Seemed suitable for this one – there was some fiddling in which coordinates should be vertices and which not, and which edges should have what weights but I managed it for the first part. Unfortunately I think I need to rebuild the whole graph for the second part so that will have to wait for some other time...
