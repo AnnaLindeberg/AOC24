@@ -65,3 +65,6 @@ This was so obviously fitting for dynamic programming that I, in essence, solved
 
 ## Day 16: Reindeer Maze
 Went back and gave this an attempt in the way I've said last year: build a networkX-graph from the input rather than writing a custom Dijkstra (or similar). Seemed suitable for this one – there was some fiddling in which coordinates should be vertices and which not, and which edges should have what weights but I managed it for the first part. Unfortunately I think I need to rebuild the whole graph for the second part so that will have to wait for some other time...
+
+## Day 20: Race Condition
+A big question mark on why I haven't used networkX earlier years – it makes it possible to solve things like this! I parsed the track as a graph and then checked "almost adjacent" pieces of tracks and wether a cheat would be advantageous. For the second part I had to slightly rethink this and instead loop over the positions it would be good to cheat-jump to, and then check if it's possible to travel that far. Positions that are too far away from start or end (in comparison to shortest start-end path) are not considered. This is just barely enough restriction of the problem to make it run in a couple of seconds, so I guess there is a faster solution but I'm not going to attempt finding it.
