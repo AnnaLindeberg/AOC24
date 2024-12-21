@@ -24,6 +24,17 @@ class Maze:
         if 0 <= x < self.maxY and 0 <= y < self.maxY:
             return self.grid[y][x]
     
+    def printWithSubstitution(self, subs, char='O'):
+        res = ''
+        for y, row in enumerate(self.grid):
+            for x, c in enumerate(row):
+                if (x,y) in subs:
+                    res += char
+                else:
+                    res += c
+            res += '\n'
+        print(res)
+    
     def toNX(self):
         G = nx.Graph()
         for y, row in enumerate(self.grid[1:-1], start=1):
@@ -69,7 +80,29 @@ class Maze:
         return G
 
                     
-                
+def onShortestPaths(G, maze):
+    fromStart = nx.shortest_path_length(G, source=maze.source,weight='weight')
+    toEnd = nx.shortest_path_length(G, target=maze.end,weight='weight')
+    minPathLen = toEnd[maze.source]
+    onShortestPath = set()
+    for v in G:
+        if fromStart[v] + toEnd[v] == minPathLen:
+            onShortestPath.add(v)
+    # now add positions in maze that aren't graph vertices
+    # maze.printWithSubstitution(onShortestPath)
+    offsets = [(1,0),(0,1),(-1,0),(0,-1)]
+    for y, row in enumerate(maze.grid[1:-1], start=1):
+        for x, stuff in enumerate(row[1:-1], start=1):
+            if ((x,y) in G and len(G.nodes[(x,y)]) > 0) or stuff == '#':
+                continue
+            potNeighbors = [(x+o[0],y+o[1]) for o in offsets]
+            neighborsOnShortestPath = [n for n in potNeighbors if n in onShortestPath]
+            if len(neighborsOnShortestPath) >= 2:
+                onShortestPath.add((x,y))
+        
+    return len(onShortestPath), onShortestPath
+
+
 
 
 
@@ -85,6 +118,9 @@ def main():
     # for n, w in zip(shortPath, weightsAlongPath):
     #     print(n, w,end=' ')
     # print(f'{shortPath[-1]}\n')
+    res2, debugDict = onShortestPaths(G, maze)
+
+    # maze.printWithSubstitution(debugDict)
 
     print(f"Task 1: {res1}\nTask 2: {res2}")
 
