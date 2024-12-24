@@ -75,3 +75,5 @@ A big question mark on why I haven't used networkX earlier years – it makes it
 This was, too, quite easy with networkx (any pattern here?!): initiate a grid-graph and then stepwisely remove vertices as specified in the input. For part one, terminate after a specified number of deletions and return the shortest path. For part two, continue until no start-end path can be found. I guess it is completely brute-force to (try to) recalculate the shortest path after each deletion – possibly there's more dynamic shortest path algorithms (actually there's many hits for papers on that topic with a quick google search) that would've been the fast solution here, but who cares when it works like this too.
 
 ## Day 21: Keypad Conundrum
+
+## Day 23: LAN Party
