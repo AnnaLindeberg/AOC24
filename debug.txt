@@ -1,0 +1,6 @@
+^           A       ^   ^   <   <   A       >>      A   vvv     A
+
+<A          >A      <A  A   v<A A   >>^A    vAA     ^A  v<AAA   >^A
+
+<v<A>>^A    vA^A    <vA<AA>>^AAvA<^A>     AAvA    ^A<vA>^AA<A>A<v<A>A>^AAAvA<^A>A
+v<<A>>^A    vA^A    v<<A>>^AAv<A<A>>^     AAvA    A^<A>Av<A>^AA<A>Av<A<A>>^AAAvA^<A>A
