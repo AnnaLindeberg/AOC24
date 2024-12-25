@@ -79,3 +79,5 @@ This was, too, quite easy with networkx (any pattern here?!): initiate a grid-gr
 ## Day 23: LAN Party
 
 ## Day 24: Crossed Wires
+
+## Day 25: Code Chronicle
