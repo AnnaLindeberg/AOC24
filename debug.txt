@@ -1,6 +1,13 @@
-^           A       ^   ^   <   <   A       >>      A   vvv     A
+** calculated
+3               7                               9A
+^A              ^^<<A                           >>      A   vvv     A
+<A>A            <AAv<AA>>^A                     vAA     ^A  v<AAA   >^A
+v<<A>>^AvA^A    v<<A>>^AAv<A<A>>^AAvAA^<A>A         v<A>^AA<A>Av<A<A>>^AAAvA^<A>A
+<<vA>>^AvA^A    <<vA>>^AA<<vA>A>^AAvAA<^A>A<vA>^AA<A>A<<vA>A>^AAAvA<^A>A
 
-<A          >A      <A  A   v<A A   >>^A    vAA     ^A  v<AAA   >^A
+*** given ***
+3               7                           9               A
+^A              <<^^A                       >>A             vvvA
+<A>A            v<<AA>^AA>A                 vAA^A           <vAAA>^A
+<v<A>>^AvA^A    <vA<AA>>^AAvA<^A>AAvA^A     <vA>^AA<A>A     <v<A>A>^AAAvA<^A>A
 
-<v<A>>^A    vA^A    <vA<AA>>^AAvA<^A>     AAvA    ^A<vA>^AA<A>A<v<A>A>^AAAvA<^A>A
-v<<A>>^A    vA^A    v<<A>>^AAv<A<A>>^     AAvA    A^<A>Av<A>^AA<A>Av<A<A>>^AAAvA^<A>A
